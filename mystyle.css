@@ -1,0 +1,56 @@
+#wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  height: 100vh;
+  padding: 0px;
+  margin: 0px;
+  width: 100vw;
+}
+#leftBar {
+  position: absolute;
+  grid-column: 1;
+  height: 100%;
+  background-color: yellow;
+  width: 25vw;
+  padding: 10px;
+  margin: 0px;
+  display: grid;
+  grid-template-rows: 50% 50% 50%;
+}
+#petalInput {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 100%;
+  height: 50vh;
+  grid-row: 1;
+}
+#petalOne {
+  grid-column: 1;
+}
+#petalTwo {
+  grid-column: 1;
+}
+#petalThree {
+  grid-column: 1;
+}
+#petalFour {
+  grid-column: 2;
+}
+#petalFive {
+  grid-column: 2;
+}
+#petalSix {
+  grid-column: 2;
+}
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+}
+#mainContent {
+  grid-column: 3 / span 1;
+}
+canvas {
+  grid-column: 3 / span 1;
+}
