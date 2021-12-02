@@ -11,8 +11,9 @@
   position: absolute;
   grid-column: 1;
   height: 100%;
-  background-color: yellow;
-  width: 25vw;
+  background-color: rgb(250, 250, 250);
+  border-right: rgb(109, 185, 230) 10px solid;
+  width: 15vw;
   padding: 10px;
   margin: 0px;
   display: grid;
