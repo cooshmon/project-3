@@ -1,73 +1,114 @@
 var slider;
 var distance;
-var sliderTwo;
+
 var petalOne = [];
+let angle = 0;
+var sliderThree;
+var sliderFour;
+var sliderFive;
+var colorOne;
 
 function setup() {
-  var myCanvas = createCanvas(1244, 850, WEBGL);
+  var myCanvas = createCanvas(windowWidth, windowHeight, WEBGL);
   myCanvas.parent("petalCanvas");
-  slider = createSlider(-280, 10, 0);
+  slider = createSlider(-500, 200, -20);
   slider.position(10, 500);
   slider.style("x", "y");
-  // slider.input(updateX());
-  sliderTwo = createSlider(-250, 10, 0);
-  sliderTwo.position(10, 600);
-  sliderTwo.style("x", "y");
+  sliderThree = createSlider(1, 200, 60);
+  sliderThree.position(10, 700);
+  sliderThree.style("radians");
+  sliderFour = createSlider(1, 250, 20);
+  sliderFour.position(10, 800);
+  sliderFour.style("s");
+  sliderFive = createSlider(-10, 200, 0);
+  sliderFive.position(10, 400);
+  sliderFive.style("x");
+  colorOne = createColorPicker("#ed225");
+  colorOne.position(10, 600);
+  colorOne.style("r,g,b");
 }
-// for (let i = 0; i < 10; i++) {
-//   let x = 30 + 30 * i;
-//   petalOne[i] = new square(x, y, 20);
-// }
-
-// function slide() {
-//   slider = createSlider(-280, -160, 0);
-//   slider.position(10, 500);
-//   slider.style("x", "y");
-//   sliderTwo = createSlider(-250, 10, 0);
-//   sliderTwo.position(10, 600);
-//   sliderTwo.style("x", "y");
-// }
-// function updateX() {
-//   push();
-//   valOne = slider.value();
-//   valTwo = sliderTwo.value();
-// }
 
 function draw() {
-  background(255);
+  background(251, 255, 7);
+  valOne = slider.value();
+  valThree = sliderThree.value();
+  valFour = sliderFour.value();
+  valFive = sliderFive.value();
+  varSix = colorOne.value();
+
+  for (let i = 0; i < radians(360); i += radians(valThree)) {
+    push();
+    translate(0 + valOne, -200 + valOne);
+    rotate(i);
+    translate(0, 100);
+    rectMode(CENTER);
+    square(valFive, valFive, valFour);
+    pop();
+    fill(varSix);
+  }
+
+  for (let i = 0; i < radians(360); i += radians(valThree)) {
+    push();
+    translate(450 + valOne, 0 + valOne);
+    rotate(i);
+    translate(0, 100);
+    rectMode(CENTER);
+    square(valFive, valFive, valFour);
+    pop();
+    fill(varSix);
+  }
+  for (let i = 0; i < radians(360); i += radians(valThree)) {
+    push();
+    translate(250 + valOne, -200 + valOne);
+    rotate(i);
+    translate(0, 100);
+    rectMode(CENTER);
+    square(valFive, valFive, valFour);
+    pop();
+    fill(varSix);
+  }
+  for (let i = 0; i < radians(360); i += radians(valThree)) {
+    push();
+    translate(250 + valOne, 250 + valOne);
+    rotate(i);
+    translate(0, 100);
+    rectMode(CENTER);
+    square(valFive, valFive, valFour);
+    pop();
+    fill(varSix);
+  }
+  for (let i = 0; i < radians(360); i += radians(valThree)) {
+    push();
+    translate(0 + valOne, 250 + valOne);
+    rotate(i);
+    translate(0, 100);
+    rectMode(CENTER);
+    square(valFive, valFive, valFour);
+    pop();
+    fill(varSix);
+  }
+  for (let i = 0; i < radians(360); i += radians(valThree)) {
+    push();
+    translate(-230 + valOne, 0 + valOne);
+    rotate(i);
+    translate(0, 100);
+    rectMode(CENTER);
+    square(valFive, valFive, valFour);
+    pop();
+    fill(varSix);
+  }
+
+  angle += radians(1 + valThree);
+
   var x = screenX;
   var y = screenY;
+
   var distance = (x, y);
-  if (keyIsPressed === true) {
-    fill(0);
-  } else {
-    fill(255);
-  }
-  valOne = slider.value();
-  valTwo = sliderTwo.value();
-
-  square(-250 + valOne, -120 + valTwo, 20);
-
-  square(-280 + valOne, -160 + valTwo, 20);
-
-  square(-300 + valOne, -200 + valTwo, 20);
-
-  square(-280 + valOne, -250 + valTwo, 20);
-
-  square(-220 + valOne, -280 + valTwo, 20);
-
-  square(-170 + valOne, -250 + valTwo, 20);
-
-  square(-140 + valOne, -200 + valTwo, 20);
-
-  square(-120 + valOne, -160 + valTwo, 20);
-  square(-125 + valOne, -120 + valTwo, 20);
-  square(-180 + valOne, -100 + valTwo, 20);
 
   rotateX(frameCount * 0.01);
   rotateY(frameCount * 0.01);
 
-  box(10, 10, 10);
+  box(10, 0, 10);
 
   //   for (let i = 0; i < 10; i++) {
   //     let x = 30 + 30 * i;
