@@ -7,6 +7,23 @@
   margin: 0px;
   width: 100vw;
 }
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+#about {
+  grid-column: 4;
+  z-index: 20;
+  align-items: baseline;
+  width: 100%;
+  position: absolute;
+}
+.Canvas {
+  z-index: 0;
+  position: static;
+}
 #leftBar {
   position: absolute;
   grid-column: 1;
@@ -15,6 +32,9 @@
   border-right: rgb(109, 185, 230) 10px solid;
   width: 15vw;
   padding: 10px;
+  padding-bottom: 0px;
+  border-bottom: 0px;
+  margin-bottom: 0px;
   margin: 0px;
   display: grid;
   grid-template-rows: 50% 50% 50%;
@@ -63,6 +83,11 @@ canvas {
   /* Removes some defaults */
   -webkit-appearance: none;
 }
+.myGlobSliders {
+  width: 250px;
+
+  /* Removes some defaults */
+}
 .mySliders::-webkit-slider-runnable-track {
   background: #707070;
   height: 1px;
@@ -83,14 +108,4 @@ canvas {
 
   /* Border radius gives rounded corners, if they're big enough, you end up with circles */
   border-radius: 8px;
-}
-
-#mySlidersChild {
-  display: none;
-}
-#parent {
-  height: 100px;
-}
-#visible {
-  display: block;
 }
