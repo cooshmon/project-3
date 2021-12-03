@@ -13,25 +13,25 @@ var pOneSliderThree;
 
 function setup() {
   var myCanvas = createCanvas(windowWidth, windowHeight, WEBGL);
-
+  myCanvas.addClass("Canvas");
   myCanvas.parent("petalCanvas");
   //global control
   slider = createSlider(-500, 200, -20);
   slider.position(10, 500);
   slider.style("x", "y");
-  slider.addClass("mySliders");
+  slider.addClass("myGlobSliders");
   sliderThree = createSlider(1, 200, 60);
   sliderThree.position(10, 700);
   sliderThree.style("radians");
-  sliderThree.addClass("mySliders");
+  sliderThree.addClass("myGlobSliders");
   sliderFour = createSlider(1, 250, 20);
   sliderFour.position(10, 800);
   sliderFour.style("s");
-  sliderFour.addClass("mySliders");
+  sliderFour.addClass("myGlobSliders");
   sliderFive = createSlider(-10, 200, 0);
   sliderFive.position(10, 400);
   sliderFive.style("x");
-  sliderFive.addClass("mySliders");
+  sliderFive.addClass("myGlobSliders");
   colorOne = createColorPicker("#ed225");
   colorOne.position(10, 600);
   colorOne.style("r,g,b");
